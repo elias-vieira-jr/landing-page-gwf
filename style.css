@@ -133,4 +133,156 @@ header ul{
     filter: brightness(1.1);
 }
 
+/* ==================== HERO ==================== */
+#hero{
+    position: relative;
+    height: 150vh;
+}
+
+.hero-visual{
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-visual img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay{
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(to top, rgba(10, 15, 25, .8) 0%, rgba(10, 15, 25, .2) 45%, rgba(10, 15, 25, 0) 70%);
+}
+
+.hero-content{
+    position: absolute;
+    top: 58vh;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-tag{
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 18px;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+
+    background-color: rgba(255, 255, 255, .15);
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+}
+
+.hero-content h1{
+    margin-bottom: 20px;
+
+    font-size: 2.8rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 2px 16px rgba(0,0,0,.35);
+}
+
+.hero-content p{
+    margin-bottom: 32px;
+
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #f2f2f2;
+    text-shadow: 0 1px 8px rgba(0,0,0,.3);
+}
+
+.hero-cta{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.btn-primario,
+.btn-secundario{
+    display: inline-block;
+    padding: 14px 28px;
+
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.btn-primario{
+    color: #fff;
+    background-color: var(--cor1);
+    border: 1px solid var(--cor1);
+}
+
+.btn-primario:hover{
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+.btn-secundario{
+    color: #fff;
+    background-color: rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, .7);
+    backdrop-filter: blur(4px);
+}
+
+.btn-secundario:hover{
+    background-color: rgba(255, 255, 255, .25);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px){
+    #hero{
+        height: 130vh;
+    }
+
+    .hero-content{
+        top: 50vh;
+    }
+
+    .hero-content h1{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px){
+    #hero{
+        height: 115vh;
+    }
+
+    .hero-content{
+        top: 42vh;
+        padding-bottom: 48px;
+    }
+
+    .hero-cta{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-primario,
+    .btn-secundario{
+        text-align: center;
+    }
+}
 /* ================================================== */
