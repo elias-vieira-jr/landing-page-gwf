@@ -1,6 +1,98 @@
 @charset "UTF8";
 
-*{
+@font-face {
+    font-family: "Knowledge";
+    src: url(../fontes/knowledge-medium.woff.ttf);
+    font-weight: normal;
+}
+
+:root{
+    --cor0: #A4D7EB;
+    --cor1: #0F7A9C;
+    --cor2: #3E3F7F;
+
+    --fonte_padrao: "Montserrat", Arial, Helvetica, sans-serif;
+    --fonte_destaque: "Knowledge", Arial, Helvetica, sans-serif;
+}
+
+* {
     margin: 0;
     padding: 0;
 }
+
+body {
+    font-family: var(--fonte_padrao);
+} 
+
+/* ==================== NAVBAR ==================== */
+/* --- Navbar ---*/
+header {
+    width:100%;
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.navbar{
+    max-width: 1200px;
+    height: 72px;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+header ul{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+}
+
+/* --- Links --- */
+.menu a,
+.portais-nav a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+/* --- Logo --- */
+.logo img{
+    height: 60px;
+}
+
+/* --- Menu --- */
+.menu a{
+    transition: 0.3s;
+    position: relative;
+}
+
+.menu a:hover{
+    color: var(--cor1);
+}
+
+.menu a::after{
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: var(--cor1);
+    transition: width .3s ease;
+}
+
+.menu a:hover::after{
+    width: 100%;
+}
+
+/* ================================================== */
