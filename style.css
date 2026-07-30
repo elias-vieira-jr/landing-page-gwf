@@ -21,10 +21,18 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth; /* Faz o scroll da página ser mais suave */
+}
+
 body {
     font-family: var(--fonte_padrao);
     background-color: var(--cor3);
 } 
+
+section{
+    scroll-margin-top: 80px; /* Evita que ao scrollar automaticament, o conteúdo seja engolido pela navbar*/
+}
 
 /* ==================== NAVBAR ==================== */
 /* --- Navbar ---*/
