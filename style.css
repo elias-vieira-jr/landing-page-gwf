@@ -10,6 +10,7 @@
     --cor0: #A4D7EB;
     --cor1: #0F7A9C;
     --cor2: #3E3F7F;
+    --cor3: #fafafa;
 
     --fonte_padrao: "Montserrat", Arial, Helvetica, sans-serif;
     --fonte_destaque: "Knowledge", Arial, Helvetica, sans-serif;
@@ -22,6 +23,7 @@
 
 body {
     font-family: var(--fonte_padrao);
+    background-color: var(--cor3);
 } 
 
 /* ==================== NAVBAR ==================== */
@@ -93,6 +95,34 @@ header ul{
 
 .menu a:hover::after{
     width: 100%;
+}
+
+/* --- Portais-nav --- */
+
+#portal-do-empregado {
+    color: var(--cor1);
+    padding: 8px 16px;
+    border: 1px solid var(--cor1);
+    border-radius: 16px;
+    transition: .3s;
+}
+
+#portal-do-empregado:hover {
+    background-color: var(--cor0);
+}
+
+#portal-do-cliente {
+    color: #fff;
+    background-color: var(--cor1);
+    padding: 8px 16px;
+    border: 1px solid var(--cor1);
+    border-radius: 16px;
+
+    transform: .3s;
+}
+
+#portal-do-cliente:hover {
+    filter: brightness(1.1);
 }
 
 /* ================================================== */
