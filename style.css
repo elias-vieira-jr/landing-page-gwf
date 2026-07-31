@@ -607,7 +607,9 @@ header ul{
     max-width: 1200px;
     margin: 0 auto;
     padding: 100px 24px;
+}
 
+.sobre-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -701,11 +703,55 @@ header ul{
     transform: scale(1.05);
 }
 
+.sobre-stats{
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    margin-top: 72px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(15, 122, 156, .15);
+}
+
+.sobre-stats li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    text-align: center;
+    padding: 0 16px;
+    border-left: 1px solid rgba(15, 122, 156, .15);
+}
+
+.sobre-stats li:first-child{
+    border-left: none;
+}
+
+.sobre-stats h3{
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--cor1);
+}
+
+.sobre-stats span{
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: #666;
+}
+
 @media (max-width: 900px){
-    #sobre{
+    .sobre-grid{
         grid-template-columns: 1fr;
-        padding: 72px 24px;
         gap: 40px;
+    }
+
+    #sobre{
+        padding: 72px 24px;
     }
 
     .sobre-visual{
@@ -718,6 +764,26 @@ header ul{
 
     .sobre-lista{
         grid-template-columns: 1fr;
+    }
+
+    .sobre-stats h3{
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 700px){
+    .sobre-stats{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 32px;
+    }
+
+    .sobre-stats li:nth-child(odd){
+        border-left: none;
+    }
+
+    .sobre-stats li:nth-child(n+3){
+        padding-top: 24px;
+        border-top: 1px solid rgba(15, 122, 156, .15);
     }
 }
 /* ================================================== */
