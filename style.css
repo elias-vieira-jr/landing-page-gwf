@@ -436,42 +436,10 @@ header ul{
 /* ==================== SERVIÇOS (liquid glass) ==================== */
 #servicos{
     position: relative;
-    overflow: hidden;
 
     max-width: 1200px;
     margin: 0 auto;
     padding: 100px 24px;
-}
-
-#servicos::before,
-#servicos::after{
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(90px);
-    z-index: 0;
-}
-
-#servicos::before{
-    top: -140px;
-    left: -120px;
-
-    width: 380px;
-    height: 380px;
-
-    background: var(--cor0);
-    opacity: .6;
-}
-
-#servicos::after{
-    bottom: -160px;
-    right: -140px;
-
-    width: 440px;
-    height: 440px;
-
-    background: var(--cor2);
-    opacity: .18;
 }
 
 .servicos-header{
