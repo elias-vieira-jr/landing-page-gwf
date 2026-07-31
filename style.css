@@ -286,3 +286,127 @@ header ul{
     }
 }
 /* ================================================== */
+
+/* ==================== DIFERENCIAL ==================== */
+#diferencial{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 24px;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 64px;
+}
+
+.diferencial-tag{
+    display: inline-block;
+    margin-bottom: 16px;
+    padding: 6px 16px;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--cor1);
+
+    background-color: var(--cor0);
+    border-radius: 20px;
+}
+
+.diferencial-content h2{
+    margin-bottom: 20px;
+
+    font-size: 2.2rem;
+    line-height: 1.25;
+    font-weight: 700;
+    color: var(--cor2);
+}
+
+.diferencial-intro{
+    margin-bottom: 40px;
+
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.diferencial-lista{
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.diferencial-lista li{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.diferencial-lista i{
+    flex-shrink: 0;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.2rem;
+    color: var(--cor1);
+
+    background-color: var(--cor0);
+    border-radius: 12px;
+}
+
+.diferencial-lista h3{
+    margin-bottom: 6px;
+
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--cor2);
+}
+
+.diferencial-lista p{
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: #666;
+}
+
+.diferencial-visual{
+    height: 100%;
+    min-height: 480px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(15, 122, 156, .18);
+}
+
+.diferencial-visual img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.diferencial-visual:hover img{
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px){
+    #diferencial{
+        grid-template-columns: 1fr;
+        padding: 72px 24px;
+        gap: 40px;
+    }
+
+    .diferencial-visual{
+        min-height: 320px;
+        order: -1;
+    }
+
+    .diferencial-content h2{
+        font-size: 1.8rem;
+    }
+}
+/* ================================================== */
