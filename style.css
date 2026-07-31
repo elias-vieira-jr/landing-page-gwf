@@ -35,25 +35,38 @@ section{
 }
 
 /* ==================== NAVBAR ==================== */
-/* --- Navbar ---*/
 header {
-    width:100%;
-    background:#fff;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    padding: 16px 16px 0;
+    background: transparent;
 }
 
 .navbar{
     max-width: 1200px;
-    height: 72px;
+    height: 64px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0 24px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    background: rgba(255, 255, 255, .55);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, .6);
+    border-radius: 20px;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, .12),
+        inset 0 1px 0 rgba(255, 255, 255, .8);
+
+    transition: background .3s ease, box-shadow .3s ease;
 }
 
 
@@ -185,10 +198,14 @@ header ul{
     font-weight: 600;
     color: #fff;
 
-    background-color: rgba(255, 255, 255, .15);
-    border: 1px solid rgba(255, 255, 255, .4);
+    background: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, .45);
     border-radius: 20px;
-    backdrop-filter: blur(4px);
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, .15),
+        inset 0 1px 0 rgba(255, 255, 255, .5);
 }
 
 .hero-content h1{
@@ -224,30 +241,35 @@ header ul{
 
     font-weight: 600;
     text-decoration: none;
+    color: #fff;
     border-radius: 16px;
-    transition: .3s;
+
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, .15),
+        inset 0 1px 0 rgba(255, 255, 255, .5);
+
+    transition: transform .3s ease, background .3s ease, box-shadow .3s ease;
 }
 
 .btn-primario{
-    color: #fff;
-    background-color: var(--cor1);
-    border: 1px solid var(--cor1);
+    background: rgba(15, 122, 156, .55);
+    border: 1px solid rgba(255, 255, 255, .4);
 }
 
 .btn-primario:hover{
-    filter: brightness(1.1);
+    background: rgba(15, 122, 156, .7);
     transform: translateY(-2px);
 }
 
 .btn-secundario{
-    color: #fff;
-    background-color: rgba(255, 255, 255, .12);
-    border: 1px solid rgba(255, 255, 255, .7);
-    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, .15);
+    border: 1px solid rgba(255, 255, 255, .5);
 }
 
 .btn-secundario:hover{
-    background-color: rgba(255, 255, 255, .25);
+    background: rgba(255, 255, 255, .28);
     transform: translateY(-2px);
 }
 
