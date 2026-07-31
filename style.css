@@ -432,3 +432,204 @@ header ul{
     }
 }
 /* ================================================== */
+
+/* ==================== SERVIÇOS (liquid glass) ==================== */
+#servicos{
+    position: relative;
+    overflow: hidden;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 24px;
+}
+
+#servicos::before,
+#servicos::after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: 0;
+}
+
+#servicos::before{
+    top: -140px;
+    left: -120px;
+
+    width: 380px;
+    height: 380px;
+
+    background: var(--cor0);
+    opacity: .6;
+}
+
+#servicos::after{
+    bottom: -160px;
+    right: -140px;
+
+    width: 440px;
+    height: 440px;
+
+    background: var(--cor2);
+    opacity: .18;
+}
+
+.servicos-header{
+    position: relative;
+    z-index: 1;
+
+    max-width: 640px;
+    margin: 0 auto 56px;
+    text-align: center;
+}
+
+.servicos-tag{
+    display: inline-block;
+    margin-bottom: 16px;
+    padding: 6px 16px;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--cor1);
+
+    background: rgba(164, 215, 235, .5);
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, .7);
+    border-radius: 20px;
+}
+
+.servicos-header h2{
+    margin-bottom: 16px;
+
+    font-size: 2.2rem;
+    line-height: 1.25;
+    font-weight: 700;
+    color: var(--cor2);
+}
+
+.servicos-header p{
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.servicos-grid{
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.servico-card{
+    padding: 32px 28px;
+
+    background: rgba(255, 255, 255, .55);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, .6);
+    border-radius: 24px;
+    box-shadow:
+        0 8px 32px rgba(15, 122, 156, .1),
+        inset 0 1px 0 rgba(255, 255, 255, .7);
+
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.servico-card:hover{
+    transform: translateY(-6px);
+    box-shadow:
+        0 16px 40px rgba(15, 122, 156, .18),
+        inset 0 1px 0 rgba(255, 255, 255, .8);
+}
+
+.servico-icone{
+    width: 52px;
+    height: 52px;
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.3rem;
+    color: var(--cor1);
+
+    background: rgba(164, 215, 235, .6);
+    border-radius: 14px;
+}
+
+.servico-card h3{
+    margin-bottom: 10px;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--cor2);
+}
+
+.servico-card p{
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: #666;
+}
+
+.servico-card--contato{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: rgba(15, 122, 156, .55);
+    border: 1px solid rgba(255, 255, 255, .35);
+}
+
+.servico-card--contato:hover{
+    background: rgba(15, 122, 156, .68);
+}
+
+.servico-card--contato h3{
+    color: #fff;
+}
+
+.servico-card--contato p{
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, .85);
+}
+
+.servico-card--contato a{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+
+    transition: gap .3s ease;
+}
+
+.servico-card--contato a:hover{
+    gap: 14px;
+}
+
+@media (max-width: 900px){
+    .servicos-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px){
+    #servicos{
+        padding: 72px 24px;
+    }
+
+    .servicos-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .servicos-header h2{
+        font-size: 1.7rem;
+    }
+}
+/* ================================================== */
