@@ -15,19 +15,27 @@
                 <a href="index.html"><img src="images/logo_header.png" alt="Logo GWF Consultoria e Contabilidade"></a>
             </div>
 
-            <div class="menu">
-                <ul>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </div>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-            <div class="portais-nav">
-                <ul>
-                    <li><a href="#" id="portal-do-empregado"><i class="fa-regular fa-address-card"></i> Portal do Empregado</a></li>
-                    <li><a href="#" id="portal-do-cliente"><i class="fa-regular fa-user"></i> Portal do Cliente</a></li>
-                </ul>
+            <div class="nav-menu" id="navMenu">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="portais-nav">
+                    <ul>
+                        <li><a href="#" id="portal-do-empregado"><i class="fa-regular fa-address-card"></i> Portal do Empregado</a></li>
+                        <li><a href="#" id="portal-do-cliente"><i class="fa-regular fa-user"></i> Portal do Cliente</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -324,5 +332,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
