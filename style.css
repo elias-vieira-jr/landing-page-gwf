@@ -318,12 +318,16 @@ header ul{
 }
 
 .hero-tag{
-    display: inline-block;
-    margin-bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
     padding: 8px 18px;
 
     font-size: 0.85rem;
     font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
     color: #fff;
 
     background: rgba(255, 255, 255, .15);
@@ -336,21 +340,35 @@ header ul{
         inset 0 1px 0 rgba(255, 255, 255, .5);
 }
 
-.hero-content h1{
-    margin-bottom: 20px;
+.hero-tag i{
+    color: var(--cor0);
+}
 
-    font-size: 2.8rem;
-    line-height: 1.2;
-    font-weight: 700;
+.hero-content h1{
+    margin-bottom: 22px;
+
+    font-size: clamp(2.2rem, 1.3rem + 3.5vw, 3.6rem);
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -.02em;
     color: #fff;
-    text-shadow: 0 2px 16px rgba(0,0,0,.35);
+    text-shadow: 0 2px 20px rgba(0,0,0,.4);
+}
+
+.hero-highlight{
+    background: linear-gradient(100deg, #fff 0%, var(--cor0) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .hero-content p{
     margin-bottom: 32px;
 
-    font-size: 1.15rem;
-    line-height: 1.6;
+    max-width: 560px;
+    font-size: 1.2rem;
+    line-height: 1.65;
+    font-weight: 500;
     color: #f2f2f2;
     text-shadow: 0 1px 8px rgba(0,0,0,.3);
 }
@@ -408,10 +426,6 @@ header ul{
 
     .hero-content{
         top: 50vh;
-    }
-
-    .hero-content h1{
-        font-size: 2rem;
     }
 }
 
