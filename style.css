@@ -1,10 +1,7 @@
 @charset "UTF8";
 
-@font-face {
-    font-family: "Knowledge";
-    src: url(../fontes/knowledge-medium.woff.ttf);
-    font-weight: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
     --cor0: #A4D7EB;
@@ -13,13 +10,21 @@
     --cor3: #fafafa;
 
     --fonte_padrao: "Montserrat", Arial, Helvetica, sans-serif;
-    --fonte_destaque: "Knowledge", Arial, Helvetica, sans-serif;
+    --fonte_destaque: "Inter", Arial, Helvetica, sans-serif;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fonte_destaque);
+}
+
+p {
+    font-family: var(--fonte_padrao);
 }
 
 html{
