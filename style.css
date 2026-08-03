@@ -655,7 +655,7 @@ header ul{
         0 8px 32px rgba(15, 122, 156, .1),
         inset 0 1px 0 rgba(255, 255, 255, .7);
 
-    transition: transform .3s ease, box-shadow .3s ease;
+    transition: transform .3s ease, box-shadow .3s ease, opacity .5s ease;
 }
 
 .servico-card:hover{
@@ -664,6 +664,13 @@ header ul{
         0 16px 40px rgba(15, 122, 156, .18),
         inset 0 1px 0 rgba(255, 255, 255, .8);
 }
+
+.servico-card:nth-child(1){ transition-delay: 0s, 0s, 0s; }
+.servico-card:nth-child(2){ transition-delay: .1s, 0s, .1s; }
+.servico-card:nth-child(3){ transition-delay: .2s, 0s, .2s; }
+.servico-card:nth-child(4){ transition-delay: .3s, 0s, .3s; }
+.servico-card:nth-child(5){ transition-delay: .4s, 0s, .4s; }
+.servico-card:nth-child(6){ transition-delay: .5s, 0s, .5s; }
 
 .servico-icone{
     width: 52px;
