@@ -138,6 +138,7 @@ header ul{
 
 /* --- Logo --- */
 .logo img{
+    width: auto;
     height: 60px;
 }
 
@@ -1286,6 +1287,7 @@ footer{
 }
 
 .footer-logo img{
+    width: auto;
     height: 64px;
     border-radius: 16px;
 }
